@@ -1,13 +1,17 @@
 {%extends 'base.html'%} {%block title%}Add Pet{%endblock%} {%block style%}
-<link rel="stylesheet" href="" />{%endblock%}{%block content%}
-<h1>Add pet form</h1>
-<form method="POST">
-  {{form.hidden_tag()}} {%for field in form if field.widget.input_type !=
-  'hidden'%}
-  <p>
-    {{field.label}} {{field}} {%for error in field.errors%} {{error}} {%endfor%}
-  </p>
-  {%endfor%}
-  <button type="submit">Add</button>
-</form>
+<link rel="stylesheet" href="/static/add_form.css" />{%endblock%}{%block
+content%}
+<div class="container">
+  <h1>Add pet form</h1>
+  <form method="POST">
+    {{form.hidden_tag()}} {%for field in form if field.widget.input_type !=
+    'hidden'%}
+    <div class="form-group mb-3">
+      {{field.label}}: {{field(class_="form-control")}} {%for error in
+      field.errors%} <small class="form-text">{{error}}</small> {%endfor%}
+    </div>
+    {%endfor%}
+    <button class="btn btn-success submit-btn" type="submit">Submit</button>
+  </form>
+</div>
 {%endblock%}

@@ -3,15 +3,23 @@
   width: 100%;
   flex-wrap: wrap;
   gap: 10px;
-  border: solid black 1px;
+  border: solid black 5px;
 }
 .each-pet-div {
-  border: 1px solid black;
+  border: solid black 2px;
   padding: 10px;
+  margin: 10px;
   text-align: center;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.each-pet-div:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 .profile-pic {
   width: 200px;
   height: 250px;
   object-fit: cover;
+}
+.add-btn {
+  margin-top: 10px;
 }

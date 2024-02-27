@@ -1,0 +1,36 @@
+.profile-div {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+}
+#info-section {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+.profile-pic {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4px;
+}
+h1 {
+  font-size: 70px;
+  font-weight: bold;
+}
+.age {
+  font-size: 20px;
+}
+.big-div {
+  border: solid black 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 500px;
+}
+form {
+  margin-top: 10px 0;
+  padding-left: 20px;
+  border-left: black solid 2px;
+}
