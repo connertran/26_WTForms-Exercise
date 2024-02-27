@@ -1,0 +1,17 @@
+{%extends 'base.html'%} {%block title%}Home Page{%endblock%} {%block style%}
+<link rel="stylesheet" href="/static/home.css" />{%endblock%}{%block content%}
+<h1>Our Pets</h1>
+<div class="list-div">
+  {%for pet in pets%}
+
+  <div class="each-pet-div">
+    <img class="profile-pic" src="{{pet.image_url()}}" alt="pet-img" />
+    <p>{{pet.name}}</p>
+    {% if pet.available %} <b> is available!</b> {%else%}
+    <p>Not available</p>
+
+    {% endif %}
+  </div>
+  {%endfor%}
+</div>
+{%endblock%}
